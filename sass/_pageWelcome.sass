@@ -1,3 +1,8 @@
+@mixin hStyle($hClr,$hfW,$hfS)
+	color: $hClr
+	font-weight: $hfW
+	font-size: $hfS
+
 header
 	width: inherit
 	clear: both
@@ -7,20 +12,15 @@ header
 		max-width: 100%
 		height: auto
 	h1
-		color: #E65C43
-		font-weight: 100
-		font-size: 4em
+		@include hStyle(#E65C43,100,4em)
 		line-height: 0
+
 	h2
-		color: #FFF
-		font-weight: 900
-		font-size: 2.5em
+		@include hStyle(#FFF,900,2.5em)
 		line-height: 0
 		margin-bottom: 70px
 	h3
-		color: #666
-		font-weight: 400
-		font-size: 2em
+		@include hStyle(#666,400,2em)
 		line-height: 0
 		margin-bottom: 50px
 #headline
@@ -30,17 +30,13 @@ header
 	text-align: center
 	margin: 0 auto
 	h1
-		color: #FFF
-		font-size: 2.5em
-		font-weight: 100
+		@include hStyle(#FFF,100,2.5em)
 		padding-top: 50px
 #content
 	width: 940px
 	margin: 20px auto
 	h3
-		color: #666
-		font-size: 2em
-		font-weight: 400
+		@include hStyle(#666,400,2em)
 	#products
 		width: 460px
 		float: left
